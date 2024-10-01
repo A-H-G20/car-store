@@ -1,0 +1,94 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #02182B;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed; /* Make the header stay at the top */
+    top: 0;
+    right: 0;
+    width: 100%; /* Make the header span the full width of the screen */
+    z-index: 1000;
+}
+
+header ul {
+    display: flex; /* Align menu items in a row */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    margin-left: 15px; /* Space between menu items */
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #0197F6;
+}
+
+
+
+/* Container for car list */
+.car-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: space-between; /* Space out items evenly */
+}
+
+/* Individual car item styling */
+.car-item {
+    background-color: white; /* White background for each car item */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside the form */
+    margin: 10px; /* Margin around each form */
+    width: calc(25% - 20px); /* Each item takes up 25% of the container width, minus margins */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    text-align: center; /* Center align text */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .car-item {
+        width: calc(50% - 20px); /* Adjust to 50% on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .car-item {
+        width: calc(100% - 20px); /* Full width on very small screens */
+    }
+}
+
+/* Button styling */
+.car-item button {
+    background-color: #0197F6; /* Bootstrap primary color */
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.car-item button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}

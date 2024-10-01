@@ -1,0 +1,237 @@
+ /* Body Styling */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #02182B;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    margin-left: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #575757;
+}
+
+/* Main Container */
+.container {
+    margin: 50px auto;
+    /* Adjusted margin for the container */
+    padding: 0 20px;
+    /* Remove padding above */
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Slider */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Car Information */
+.car-info {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.car-info h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.car-info p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.car-info .price {
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+    .prev,
+    .next {
+        padding: 5px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Back Button Container */
+.back-button {
+    margin: 0;
+    /* No margin */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+    /* Added padding for better spacing */
+}
+
+.back-button a {
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.back-button img {
+    width: 30px;
+    /* Adjust the size as needed */
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    opacity: 0.8;
+    /* Slightly transparent for better visual effect */
+}
+
+.back-button a:hover img {
+    transform: scale(1.2) rotate(-15deg);
+    /* Smooth scaling and rotation */
+    opacity: 1;
+    /* Fully visible on hover */
+}
+
+/* Responsive Adjustments for Back Button */
+@media (max-width: 768px) {
+    .back-button {
+        padding: 5px 0;
+        /* Adjust for smaller screens */
+    }
+
+    .back-button img {
+        width: 24px;
+        /* Adjust the size for smaller screens */
+        height: 24px;
+    }
+}
+/* Styling for buttons */
+button {
+    background-color: #0197F6; /* Orange background */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Inner padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Font size */
+    margin: 10px 5px; /* Space around the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Style the link inside the button */
+button a {
+    color: white; /* White text for link */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Make link take full button space */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    line-height: 100%; /* Align text properly */
+    font-size: 16px; /* Match the font size */
+}
+
+button:hover {
+    background-color: #02182B; /* Darker orange on hover */
+}
+
+/* Additional styling for the form button */
+form button {
+    background-color: #02182B; /* Green background */
+    padding: 10px 20px; /* Inner padding */
+    border: none; /* Remove border */
+    color: white; /* White text color */
+    font-size: 16px; /* Font size */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+form button:hover {
+    background-color: #0197F6; /* Darker green on hover */
+}
